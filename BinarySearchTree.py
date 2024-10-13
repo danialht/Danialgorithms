@@ -1,5 +1,4 @@
 from BinaryTree import BinaryTree
-from DFS import DFS
 
 class BinarySearchTree(BinaryTree):
     
