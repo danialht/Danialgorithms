@@ -22,17 +22,19 @@ class BinarySearchTree(BinaryTree):
 
     def add(self, item, key):
         if self._key == key:
-            return
+            return None
         elif self._key < key:
             if self._right_child == None:
                 self._right_child = BinarySearchTree(item, key)
+                return self._right_child
             else:
-                self._right_child.add(item, key)
+                return self._right_child.add(item, key)
         else:
             if self._left_child == None:
                 self._left_child = BinarySearchTree(item, key)
+                return self._left_child
             else:
-                self._left_child.add(item, key)
+                return self._left_child.add(item, key)
 
     def remove(self, key):
         if self.key == key:
