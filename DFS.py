@@ -4,7 +4,7 @@ class DFS:
         
         def recursive_search(node):
             if node is not None:
-                traversal.append(node)
+                traversal.append(representation_function(node))
             else:
                 return
             if node.get_left_child() is not None:
