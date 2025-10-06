@@ -1,12 +1,5 @@
 from BinarySearchTree import BinarySearchTree
 
-# class Node:
-#     def __init__(self, item, key, skew):
-#         self.item = item
-#         self.skew = skew
-#         self.item = item
-#         self.key = key
-
 class AVLBST(BinarySearchTree):
     
     def __init__(self, item, key, left_child = None, right_child = None, parent = None):
@@ -81,7 +74,7 @@ class AVLBST(BinarySearchTree):
         and then we will swap (key, item) between S and SL
         """
         if self._left_child is None:
-            raise "A node must have left child in order to rotate it to right."
+            raise ValueError("A node must have left child in order to rotate it to right.")
 
         parent = self._parent
         self_left = self._left_child
@@ -117,7 +110,7 @@ class AVLBST(BinarySearchTree):
     def _rotate_left(self):
         
         if self._right_child is None:
-            raise "A node must have left child in order to rotate it to right."
+            raise ValueError("A node must have left child in order to rotate it to right.")
 
         parent = self._parent
         self_right = self._right_child
